@@ -1,0 +1,38 @@
+@(customers: List[Customer])
+
+@main("Welcome to Play and JPA Hibernate in Java") {
+
+<h1>Play and JPA Hibernate Store</h1>
+
+<h3>Customers:</h3>
+
+<table id="customerTable">
+    <tr>
+        <th>
+            Name
+        </th>
+        <th>
+            Addesses
+        </th>
+    </tr>
+    @for(cust <- customers) {
+    <tr>
+        <td>
+            @cust.name
+        </td>
+        <td>
+            <table>
+                @for(custAddress <- cust.addresses) {
+                <tr>
+                    <td>
+                        @custAddress.address
+                    </td>
+                </tr>
+                }
+            </table>
+        </td>
+    </tr>
+    }
+</table>
+
+}

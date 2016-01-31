@@ -1,0 +1,8 @@
+
+#customerTable {
+    border-collapse: collapse;
+}
+
+#customerTable, th, td {
+    border: 1px solid black;
+}
